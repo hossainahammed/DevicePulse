@@ -1,8 +1,4 @@
-
-
 part of 'device_snapshot.dart';
-
-
 
 class DeviceSnapshotAdapter extends TypeAdapter<DeviceSnapshot> {
   @override

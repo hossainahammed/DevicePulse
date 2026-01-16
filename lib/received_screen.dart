@@ -1,6 +1,6 @@
+import 'package:devicepulse/models/device_snapshot.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import ' models/device_snapshot.dart';
 
 
 class ReceivedScreen extends StatelessWidget {
@@ -24,8 +24,8 @@ class ReceivedScreen extends StatelessWidget {
             itemBuilder: (_, i) {
               final snap = box.getAt(i)!;
               return ListTile(
-                title: Text(snap.time.toIso8601String()),
-                subtitle: Text(snap.data.toString()),
+                //title: Text(snap.time.toIso8601String()),
+               // subtitle: Text(snap.data.toString()),
               );
             },
           );
