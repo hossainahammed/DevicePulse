@@ -69,10 +69,10 @@ class UDPService {
 //         final decoded = utf8.decode(dg.data);
 //         final map = jsonDecode(decoded) as Map<String, dynamic>;
 //
-//         // 🔹 Convert JSON → DeviceSnapshot
+//
 //         final snapshot = DeviceSnapshot.fromJson(map);
 //
-//         // 🔹 Store as JSON (NO Hive adapter needed)
+//
 //         final box = Hive.box('snapshots');
 //         box.add(snapshot.toJson());
 //       }

@@ -1,7 +1,8 @@
+import 'package:devicepulse/screens/received_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'dashboard_screen.dart';
-import 'received_screen.dart';
+//import 'received_screen.dart';
 import 'package:device_preview/device_preview.dart';
 
 void main() async {
