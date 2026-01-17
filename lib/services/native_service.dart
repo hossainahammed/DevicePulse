@@ -5,6 +5,9 @@ class NativeService {
 
   static Future<Map<String, dynamic>> getDeviceData() async {
     final result = await _channel.invokeMethod('getDeviceData');
+    if (result == null) {
+      return {};
+    }
     return Map<String, dynamic>.from(result);
   }
 }

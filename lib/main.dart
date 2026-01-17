@@ -1,24 +1,24 @@
+import 'package:devicepulse/models/device_snapshot.dart';
 import 'package:devicepulse/screens/received_screen.dart';
+import 'package:devicepulse/services/udp_service.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:path_provider/path_provider.dart';
 import 'dashboard_screen.dart';
-//import 'received_screen.dart';
 import 'package:device_preview/device_preview.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
-  await Hive.openBox('received_snapshots');
-  //await Hive.openBox<DeviceSnapshot>('snapshots');
-  runApp(
-      // DevicePreview(
-      //   enabled: true,
-      //   builder: (context)=>MyApp() ,
-      // )
-      const MyApp()
-  );
 
+  await Hive.initFlutter();
+  await Hive.openBox('snapshots');
+
+
+  UDPService.startListening();
+  runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
